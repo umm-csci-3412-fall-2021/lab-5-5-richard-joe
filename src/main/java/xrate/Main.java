@@ -7,7 +7,7 @@ import java.io.IOException;
 import java.util.Scanner;
 
 public class Main {
-    private static final String NICS_DUMMY_DATA_URL = "http://facultypages.morris.umn.edu/~mcphee/ExchangeRateData/";
+    private static final String FIXER_URL = "http://data.fixer.io/api/";
 
     /**
      * Prompts the user for a currency code, and prints out the exchange rate for
@@ -19,7 +19,7 @@ public class Main {
      *                     the URL
      */
     public static void main(String[] args) throws IOException {
-        ExchangeRateReader exchangeRateReader = new ExchangeRateReader(NICS_DUMMY_DATA_URL);
+        ExchangeRateReader exchangeRateReader = new ExchangeRateReader(FIXER_URL);
 
         System.out.print("Enter the desired currency code: ");
         Scanner scanner = new Scanner(System.in);
